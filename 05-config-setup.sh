@@ -50,7 +50,14 @@ function networksetup {
 	echo "Might wanna reboot now with < $ reboot >"
 }
 
+function aliasessetup {
+	cp ./configs/.aliases ~/
+	echo "source ~/.aliases" >> ~/.bashrc
+	echo "source ~/.aliases" >> ~/.zshrc
+}
 
+
+aliasessetup
 dmconfig
 i3setup
 alacrittysetup
