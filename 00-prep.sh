@@ -2,6 +2,7 @@
 
 PKGS=(
 	'base-devel'
+	'go' # needed for yay setup
 )
 
 for PKG in "${PKGS[@]}"; do
