@@ -2,6 +2,8 @@
 
 PKGS=(
 	'picom'
+	'i3-gaps'
+	'i3status'
 	'i3-blocks'
 	'dunst'
 	'rofi'
@@ -10,8 +12,6 @@ PKGS=(
 	'qt5ct'
 	'nitrogen'
 	'arandr'
-	''
-	'sddm'
 )
 
 YAYPKGS=(
