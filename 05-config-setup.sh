@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+USERNAME="$(whoami)"
+
 PKGS=(
 )
 
@@ -64,10 +66,20 @@ function xinitsetup {
 	cp ./configs/.xinitrc ~/
 }
 
+function autologin {
+	echo -e '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx' >> ~/.profile
+	sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
+	sudo echo -e "[Service] \nExecStart=\nExecStart=-/usr/bin/agetty --autologin $USERNAME --noclear %I 38400 linux" > /etc/systemd/system/getty@tty1.service.d/autologin.conf
+	echo "source ~/.profile"
+	if [[ -f ~/.bash_profile ]]; then
+		echo "source ~/.profile" >> ~/.bash_profile
+	fi
+}
+
 
 aliasessetup
-xinitseup
-dmconfig
+xinitsetup
+#dmconfig
 i3setup
 rofisetup
 alacrittysetup
@@ -75,6 +87,7 @@ picomsetup
 neovimsetup
 qtsetup
 networksetup
+autologin
 
 
 echo "Done!"
