@@ -17,6 +17,10 @@ function i3setup {
 	cp -r ./configs/i3 ~/.config/
 }
 
+function rofisetup {
+	cp -r ./configs/rofi ~/.config/
+}
+
 function alacrittysetup {
 	cp -r ./configs/alacritty ~/.config/
 }
@@ -56,10 +60,16 @@ function aliasessetup {
 	echo "source ~/.aliases" >> ~/.zshrc
 }
 
+function xinitsetup {
+	cp ./configs/.xinitrc ~/
+}
+
 
 aliasessetup
+xinitseup
 dmconfig
 i3setup
+rofisetup
 alacrittysetup
 picomsetup
 neovimsetup
