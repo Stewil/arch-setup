@@ -2,7 +2,6 @@
 
 PKGS=(
 	'base-devel'
-	'git'
 )
 
 for PKG in "${PKGS[@]}"; do
