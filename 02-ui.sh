@@ -12,6 +12,9 @@ PKGS=(
 	'qt5ct'
 	'nitrogen'
 	'arandr'
+	'noto-fonts-cjk'
+	'noto-fonts-emoji'
+	'noto-fonts'
 )
 
 YAYPKGS=(
