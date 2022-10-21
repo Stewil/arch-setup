@@ -37,6 +37,7 @@ function neovimsetup {
 
 function qtsetup {
 	sudo bash -c "echo 'export QT_QPA_PLATFORMTHEME=qt5ct' >> /etc/environment"
+	sudo bash -c "echo 'export export QT_QUICK_CONTROLS_STYLE=org.kde.breeze' >> /etc/environment"
 	cp -r ./configs/qt5ct ~/.config/
 }
 
