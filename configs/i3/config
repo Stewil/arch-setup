@@ -6,6 +6,7 @@ font pango:monospace 10
 
 exec --no-startup-id picom -CGb
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id fcitx -d
 set $darkbluetrans	#08052be6
 set $darkblue		#08052b
 set $lightblue		#5294e2
